@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source .env
+
 echo "Updating RubyGems..."
 gem update --system -N
 
