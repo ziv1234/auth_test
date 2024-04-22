@@ -1,0 +1,24 @@
+<div id="<%= dom_id dream %>">
+  <p>
+    <strong>User:</strong>
+    <%= dream.user_id %>
+  </p>
+
+  <p>
+    <strong>Summary:</strong>
+    <%= dream.summary %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= dream.description %>
+  </p>
+
+  <p>
+    <strong>Images:</strong>
+    <% dream.images.each do |image| %>
+      <div><%= link_to image.filename, image %></div>
+    <% end %>
+  </p>
+
+</div>
