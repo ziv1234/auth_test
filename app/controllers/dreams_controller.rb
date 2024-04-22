@@ -22,7 +22,7 @@ class DreamsController < ApplicationController
 
   # POST /dreams or /dreams.json
   def create
-    @dream = Dream.new(dream_params)
+    @dream = current_user.dreams.new(dream_params)
 
     respond_to do |format|
       if @dream.save
